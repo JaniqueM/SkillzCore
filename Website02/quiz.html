@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Skills Advisor - Quiz</title>
+    <link rel="stylesheet" href="quizestyle.css">
+</head>
+<body>
+
+<!-- Side Navigation -->
+<nav>
+    <ul>
+        <li><a href="landing.html">Home</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Background Video -->
+<div class="video-background">
+    <video autoplay muted loop id="bg-video">
+        <source src="your-video.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+
+<div class="container">
+    <!-- Intro Quote / Description -->
+    <div class="quiz-intro">
+        <p><strong>This tool is designed to help you, as a student, discover your soft skill strengths.
+            By taking this quiz, you’ll understand not just what your strengths are, but why they fit you,
+            along with a few practical suggestions for what you could do next. Your journey to growth starts here!</strong></p>
+    </div>
+
+    <h1>Discover Your Soft Skills!</h1>
+    <p>Answer the questions below to reveal your strongest soft skill, why it suits you, and potential career paths you could thrive in. 🎯</p>
+
+    <form id="quizForm">
+
+        <!-- Questions 1-8 (same as previous) -->
+        <div class="question">
+            <p>1. When starting a group project, what do you do first?</p>
+            <label><input type="radio" name="q1" value="communication"> Discuss roles</label>
+            <label><input type="radio" name="q1" value="critical"> Analyse requirements</label>
+            <label><input type="radio" name="q1" value="time"> Plan deadlines</label>
+            <label><input type="radio" name="q1" value="leadership"> Assign tasks</label>
+        </div>
+
+        <div class="question">
+            <p>2. When a problem comes up, you usually…</p>
+            <label><input type="radio" name="q2" value="critical"> Break it down</label>
+            <label><input type="radio" name="q2" value="communication"> Talk it out</label>
+            <label><input type="radio" name="q2" value="leadership"> Guide others</label>
+            <label><input type="radio" name="q2" value="time"> Check schedule</label>
+        </div>
+
+        <div class="question">
+            <p>3. Your biggest strength during assignments?</p>
+            <label><input type="radio" name="q3" value="time"> Staying on schedule</label>
+            <label><input type="radio" name="q3" value="communication"> Communication</label>
+            <label><input type="radio" name="q3" value="critical"> Deep thinking</label>
+            <label><input type="radio" name="q3" value="leadership"> Motivating others</label>
+        </div>
+
+        <div class="question">
+            <p>4. In stressful situations, you tend to…</p>
+            <label><input type="radio" name="q4" value="communication"> Express concerns</label>
+            <label><input type="radio" name="q4" value="critical"> Analyse causes</label>
+            <label><input type="radio" name="q4" value="time"> Reorganise tasks</label>
+            <label><input type="radio" name="q4" value="leadership"> Calm others</label>
+        </div>
+
+        <div class="question">
+            <p>5. When working with others, you usually…</p>
+            <label><input type="radio" name="q5" value="leadership"> Take responsibility</label>
+            <label><input type="radio" name="q5" value="communication"> Share ideas</label>
+            <label><input type="radio" name="q5" value="time"> Keep the plan on track</label>
+            <label><input type="radio" name="q5" value="critical"> Evaluate suggestions</label>
+        </div>
+
+        <div class="question">
+            <p>6. What motivates you to complete tasks?</p>
+            <label><input type="radio" name="q6" value="time"> Finishing early</label>
+            <label><input type="radio" name="q6" value="communication"> Feedback</label>
+            <label><input type="radio" name="q6" value="critical"> Understanding the topic</label>
+            <label><input type="radio" name="q6" value="leadership"> Helping the group</label>
+        </div>
+
+        <div class="question">
+            <p>7. What describes you best?</p>
+            <label><input type="radio" name="q7" value="critical"> Love puzzles</label>
+            <label><input type="radio" name="q7" value="communication"> Enjoy talking</label>
+            <label><input type="radio" name="q7" value="leadership"> Take charge</label>
+            <label><input type="radio" name="q7" value="time"> Organised</label>
+        </div>
+
+        <div class="question">
+            <p>8. When you get feedback, you usually…</p>
+            <label><input type="radio" name="q8" value="communication"> Ask questions</label>
+            <label><input type="radio" name="q8" value="critical"> Evaluate logic</label>
+            <label><input type="radio" name="q8" value="leadership"> Encourage team</label>
+            <label><input type="radio" name="q8" value="time"> Improve workflow</label>
+        </div>
+
+        <button type="submit" class="submit-btn">See My Results</button>
+    </form>
+
+    <div id="result" class="hidden"></div>
+</div>
+
+<script src="quiz.js"></script>
+</body>
+</html>
