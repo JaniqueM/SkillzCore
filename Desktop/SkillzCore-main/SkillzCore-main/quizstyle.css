@@ -1,0 +1,266 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #121212;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    background: darkslategray;
+}
+
+.container {
+    max-width: 800px;
+    background: #fff;
+    padding: 25px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.container:hover {
+    transform: translateY(-3px);
+}
+
+h1 {
+    text-align: center;
+}
+
+
+/*  Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 120px;
+    background: mintcream;
+    border-right: 2px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #121212;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: block;
+    width: 80%;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background: #0078ff;
+    color: #fff;
+    transform: scale(1.05);
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 120px;
+
+    /* transparent background */
+    background: rgba(255, 255, 255, 0.3); /* white with 30% opacity */
+    backdrop-filter: blur(10px);           /* optional: frosted glass effect */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    z-index: 10;
+}
+
+/* Main container */
+.container {
+    max-width: 1000px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.container:hover {
+    transform: translateY(-3px);
+}
+
+/* Headings & paragraphs */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: black;
+}
+
+p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Individual questions */
+.question {
+    background: #f0f4ff;
+    padding: 20px;
+    border-radius: 12px;
+    display: grid;
+    gap: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.question:hover {
+    background: #d0e1ff;
+    transform: translateY(-2px);
+}
+
+.question p {
+    font-weight: bold;
+    color: #0078ff;
+}
+
+/* Radio buttons and labels */
+label {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+label:hover {
+    background-color: #0078ff;
+    color: #fff;
+}
+
+/* Submit button */
+.submit-btn {
+    grid-column: 1 / -1;
+    padding: 15px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #0078ff, #00d4ff);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #005fcc, #00a4ff);
+}
+
+/* Results box */
+.result-layout {
+    background: #f0f8ff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.result-layout h2 {
+    color: #0078ff;
+    margin-bottom: 10px;
+}
+
+.result-layout .quote {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.result-layout .result-details p {
+    text-align: left;
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 60px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        padding: 10px 0;
+        border-right: none;
+        border-bottom: 2px solid #eee;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+    }
+}
+
+/* Fullscreen background video */
+#bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures the video covers entire screen */
+    z-index: -1;       /* behind all content */
+}
+
+/* Make sure container is above video */
+.container {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.85); /* optional frosted glass effect */
+    border-radius: 15px;
+    padding: 30px;
+}
