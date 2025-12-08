@@ -83,14 +83,9 @@ nav {
     height: 100vh;
     width: 120px;
 
-    /* background image */
-    background-image: url('fiori-1295663_1280.png'); /* replace with your image */
-    background-size: cover;        /* make it cover the entire nav */
-    background-repeat: no-repeat;
-    background-position: center center;
-
-    /* fallback color in case image doesn't load */
-    background-color: mintcream;
+    /* transparent background */
+    background: rgba(255, 255, 255, 0.3); /* white with 30% opacity */
+    backdrop-filter: blur(10px);           /* optional: frosted glass effect */
 
     display: flex;
     flex-direction: column;
@@ -99,7 +94,6 @@ nav {
     padding-top: 30px;
     z-index: 10;
 }
-
 
 /* Content container */
 .container {
@@ -161,8 +155,58 @@ nav {
     font-size: 14px;
     font-weight: 600;
     text-align: center;
-    color: #1a1a1a;
+    color: white;
 }
+
+.image-with-caption {
+    width: 300px;            /* box width */
+    margin: 20px;
+    text-align: center;
+}
+
+.image-with-caption img {
+    width: 100%;
+    display: block;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Caption box under image */
+.caption-box {
+    background: rgba(255, 255, 255, 0.95);  /* light box background */
+    border: 2px solid #0078ff;              /* optional border */
+    border-radius: 0 0 12px 12px;           /* round bottom corners */
+    padding: 10px 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    margin-top: -4px;                        /* slight overlap if desired */
+}
+
+.caption-box p {
+    margin: 0;
+    color: orangered;  /* text color */
+    font-weight: 600;
+}
+
+a button {
+    padding: 12px 24px;
+    background-color: #00a4ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+a button:hover {
+    background-color: #00a4ff;
+    transform: scale(1.05);
+}
+
 
 /*Bouncy Animation*/
 @keyframes bounce {

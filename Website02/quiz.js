@@ -45,6 +45,7 @@ document.getElementById("quizForm").addEventListener("submit", function(e) {
         leadership: "Take initiative, lead small teams, or mentor peers to grow your leadership abilities."
     };
 
+
     // Motivational quote to pair with the result
     const resultQuote = "“Your strengths shape your future — embrace them and grow!”";
 
@@ -60,6 +61,22 @@ document.getElementById("quizForm").addEventListener("submit", function(e) {
                 <p><strong>Suggested career fields:</strong> ${careerSuggestions[topSkill].join(", ")}</p>
                 <p><strong>Next steps:</strong> ${nextSteps[topSkill]}</p>
             </div>
+        </div>
+    `;
+});
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent page reload
+
+    // Optionally, you can collect form data here if needed
+    const name = document.getElementById("name").value;
+
+    // Display a thank you message
+    const formContainer = document.querySelector(".contact-container");
+    formContainer.innerHTML = `
+        <div class="thank-you-message">
+            <h2>Thank You, ${name}!</h2>
+            <p>Your message has been sent successfully. We'll get back to you shortly.</p>
         </div>
     `;
 });
