@@ -1,11 +1,11 @@
 document.getElementById("quizForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // prevent page reload
+    e.preventDefault(); // stops page from reloading when user takes long
 
     const totalQuestions = 8;
     const categories = ["communication", "critical thinking", "time management", "leadership"];
     const scores = { communication: 0, critical: 0, time: 0, leadership: 0 };
 
-    // Count answers
+    // Counts the answers entered
     for (let i = 1; i <= totalQuestions; i++) {
         const selected = document.querySelector(`input[name="q${i}"]:checked`);
         if (!selected) {
@@ -15,13 +15,13 @@ document.getElementById("quizForm").addEventListener("submit", function(e) {
         scores[selected.value]++;
     }
 
-    // Determine top skill
+    // Finds the top skill
     let topSkill = categories[0];
     categories.forEach(cat => {
         if (scores[cat] > scores[topSkill]) topSkill = cat;
     });
 
-    // Suggested careers
+    // Suggests the careers
     const careerSuggestions = {
         communication: ["Marketing", "Public Relations", "Customer Success", "Teaching"],
         critical: ["Data Analysis", "Research", "Software Development", "Consulting"],
@@ -45,7 +45,7 @@ document.getElementById("quizForm").addEventListener("submit", function(e) {
         leadership: "Take initiative, lead small teams, or mentor peers to grow your leadership abilities."
     };
 
-    // Motivational quote for result
+    // Motivational quote to pair with the result
     const resultQuote = "“Your strengths shape your future — embrace them and grow!”";
 
     // Display result with layout and quote
