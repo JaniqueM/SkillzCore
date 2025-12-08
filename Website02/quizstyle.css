@@ -1,22 +1,32 @@
-
-* {
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #121212;
+    padding: 20px;
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    background: darkslategray;
 }
 
-body {
-    font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
-    color: #121212;
-    line-height: 1.6;
-    min-height: 100vh;
-    background: darkslategray;
-
-    /* Flex centering */
+.container {
+    max-width: 800px;
+    background: #fff;
+    padding: 25px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.container:hover {
+    transform: translateY(-3px);
+}
+
+h1 {
+    text-align: center;
 }
 
 
@@ -66,7 +76,6 @@ nav ul li a:hover {
     color: #fff;
     transform: scale(1.05);
 }
-
 
 /* Main container */
 .container {
@@ -216,4 +225,5 @@ label:hover {
     .submit-btn {
         font-size: 16px;
     }
+}
 }
