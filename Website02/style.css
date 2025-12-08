@@ -1,4 +1,3 @@
-/* Body styling */
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #121212;
@@ -8,9 +7,6 @@ body {
     box-sizing: border-box;
 }
 
-
-
-/* Container */
 .container {
     max-width: 800px;
     background: #fff;
@@ -29,7 +25,6 @@ body {
     transform: translateY(-3px);
 }
 
-/* Headings */
 h1 {
     text-align: center;
 }
@@ -37,7 +32,7 @@ h1 {
 /* Questions container using Grid */
 #quizForm {
     display: grid;
-    grid-template-columns: 1fr; /* single column by default */
+    grid-template-columns: 1fr;
     gap: 15px;
 }
 
@@ -71,7 +66,7 @@ label:hover {
     color: #0078ff;
 }
 
-/* Button styling */
+/* Button */
 .submit-btn {
     padding: 12px 20px;
     width: 100%;
@@ -89,7 +84,7 @@ label:hover {
     transform: scale(1.05);
 }
 
-/* Result styling */
+/* Result  */
 .hidden { display: none; }
 
 #result {
@@ -102,19 +97,19 @@ label:hover {
     transition: opacity 0.5s ease, transform 0.3s ease;
 }
 
-/* Side Navigation */
+/*  Navigation */
 nav {
-    position: fixed;        /* stays in place while scrolling */
+    position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;          /* full viewport height */
-    width: 200px;           /* adjust width as needed */
+    height: 100vh;
+    width: 200px;
     background: rgba(255,255,255,0.95);
     border-right: 2px solid #eee;
     display: flex;
-    flex-direction: column; /* vertical stacking */
-    justify-content: center; /* center links vertically */
-    align-items: center;     /* center links horizontally */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-top: 30px;
     z-index: 10;
 }
@@ -122,8 +117,8 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    flex-direction: column;  /* stack links vertically */
-    gap: 30px;               /* space between links */
+    flex-direction: column;
+    gap: 30px;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -139,7 +134,7 @@ nav ul li a {
     border-radius: 8px;
     transition: all 0.3s ease;
     display: block;
-    width: 80%;              /* optional: makes links uniform width */
+    width: 80%;
     text-align: center;
 }
 
@@ -151,43 +146,18 @@ nav ul li a:hover {
 
 /* Adjust container to not overlap nav */
 .container {
-    margin-left: 220px;      /* slightly larger than nav width */
+    margin-left: 220px;
     padding: 30px;
-}
-
-
-/* Video container */
-.video-background {
-    position: fixed;      /* fixed so it stays while scrolling */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    z-index: -1;          /* behind everything */
-}
-
-/* Video styling */
-#bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    object-fit: cover;    /* fill the container nicely */
 }
 
 /* Content container */
 .container {
-    position: relative;   /* so it appears above video */
-    z-index: 1;           /* higher than video */
+    position: relative;
+    z-index: 1;
     max-width: 900px;
     margin: auto;
     padding: 25px;
-    background: rgba(255,255,255,0.85); /* optional: semi-transparent bg for readability */
+    background: rgba(255,255,255,0.85);
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
@@ -201,26 +171,26 @@ nav ul li a:hover {
     transform: translateY(-50%);
 }
 
-/* ===== Grid Container ===== */
+/*Grid Container*/
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
     max-width: 600px;
-    margin: 40px auto 0 auto; /* centers on the page */
+    margin: 40px auto 0 auto;
     padding: 0 10px;
 }
 
-/* ===== Grid Items ===== */
+/* Grid Items*/
 .grid-item {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* ===== Circle Images ===== */
+/* Circle Images*/
 .grid-item img {
-    width: 90px;    /* small enough to fit */
+    width: 90px;
     height: 90px;
     border-radius: 50%;
     object-fit: cover;
@@ -231,7 +201,7 @@ nav ul li a:hover {
     animation: bounce 1.8s infinite ease-in-out;
 }
 
-/* ===== Skill Text Under Each ===== */
+/* Title under each image*/
 .skill-name {
     margin-top: 8px;
     font-size: 14px;
@@ -240,43 +210,9 @@ nav ul li a:hover {
     color: #222;
 }
 
-/* ===== Bouncy Animation ===== */
+/*Bouncy Animation*/
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
 }
 
-/* ===== MOBILE FIX: 2 columns ===== */
-@media(max-width: 600px) {
-    .image-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .grid-item img {
-        width: 80px;
-        height: 80px;
-    }
-}
-
-
-/* Responsive: change grid layout on wider screens */
-@media screen and (min-width: 600px) {
-    #quizForm {
-        grid-template-columns: 1fr 1fr; /* two-column layout for questions */
-    }
-}
-
-/* Mobile responsiveness */
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .submit-btn {
-        font-size: 14px;
-    }
-}

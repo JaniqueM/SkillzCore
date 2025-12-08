@@ -1,4 +1,3 @@
-/* Body styling */
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #121212;
@@ -8,7 +7,6 @@ body {
     box-sizing: border-box;
 }
 
-/* Container */
 .container {
     max-width: 800px;
     background: #fff;
@@ -27,77 +25,8 @@ body {
     transform: translateY(-3px);
 }
 
-/* Headings */
 h1 {
     text-align: center;
-}
-
-/* Questions container using Grid */
-#quizForm {
-    display: grid;
-    grid-template-columns: 1fr; /* single column by default */
-    gap: 15px;
-}
-
-/* Individual question */
-.question {
-    background: #f5f5f5;
-    padding: 15px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.question:hover {
-    background-color: #e0e0e0;
-    transform: translateY(-2px);
-}
-
-.question p {
-    font-weight: bold;
-}
-
-/* Labels inside questions */
-label {
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-label:hover {
-    color: #0078ff;
-}
-
-/* Button styling */
-.submit-btn {
-    padding: 12px 20px;
-    width: 100%;
-    background: #0078ff;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.submit-btn:hover {
-    background: #005fcc;
-    transform: scale(1.05);
-}
-
-/* Result styling */
-.hidden { display: none; }
-
-#result {
-    margin-top: 25px;
-    padding: 20px;
-    background: #eef6ff;
-    border-radius: 8px;
-    font-weight: bold;
-    text-align: center;
-    transition: opacity 0.5s ease, transform 0.3s ease;
 }
 
 /* Navigation using Flexbox */
@@ -147,25 +76,6 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-/* Video background */
-.video-background {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-#bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-}
 
 .content {
     position: relative;
@@ -174,25 +84,4 @@ nav ul li a:hover {
     color: white;
     top: 50%;
     transform: translateY(-50%);
-}
-
-/* Responsive: change grid layout on wider screens */
-@media screen and (min-width: 600px) {
-    #quizForm {
-        grid-template-columns: 1fr 1fr; /* two-column layout for questions */
-    }
-}
-
-/* Mobile responsiveness */
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .submit-btn {
-        font-size: 14px;
-    }
 }
